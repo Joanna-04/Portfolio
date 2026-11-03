@@ -158,8 +158,42 @@ function initTerminal() {
   }, 450);
 }
 
+/* 10. Photo carousel with arrows and dots */
+function initCarousel() {
+  const box = $(".carousel");
+  if (!box) return;
+  const slides = $$(".slide", box);
+  const dotsBox = $(".dots", box);
+  let current = 0;
+
+  const dots = slides.map((_, n) => {
+    const dot = document.createElement("button");
+    dot.className = "dot";
+    dot.setAttribute("aria-label", `Show photo ${n + 1} of ${slides.length}`);
+    dot.addEventListener("click", () => show(n));
+    dotsBox.appendChild(dot);
+    return dot;
+  });
+
+  function show(n) {
+    current = (n + slides.length) % slides.length;
+    slides.forEach((s, k) => s.classList.toggle("active", k === current));
+    dots.forEach((d, k) => d.classList.toggle("on", k === current));
+  }
+
+  $(".prev", box).addEventListener("click", () => show(current - 1));
+  $(".next", box).addEventListener("click", () => show(current + 1));
+    let startX = 0;
+  box.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener("touchend", (e) => {
+    const diff = e.changedTouches[0].clientX - startX;
+    if (Math.abs(diff) > 40) show(current + (diff < 0 ? 1 : -1));
+  });
+  show(0);
+}
+
 function init() {
-  [initMenu, initTheme, initActiveNav, initReveal, initTerminal,
+  [initMenu, initTheme, initActiveNav, initReveal, initTerminal, initCarousel,
    initFilter, initModal, initForm, initScrollUI, initYear].forEach((fn) => {
     try { fn(); } catch (err) { console.warn(`${fn.name} failed:`, err); }
   });
