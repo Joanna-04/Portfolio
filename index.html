@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal portfolio of Joanna Mary - projects, skills and contact details.">
+  <title>Joanna Mary | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home" class="logo">JM</a>
+      <button id="menuBtn" class="icon-btn menu-btn" aria-expanded="false" aria-controls="navLinks"
+        aria-label="Toggle menu">&#9776;</button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeBtn" class="icon-btn" aria-label="Switch to dark theme">&#9790;</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <svg class="avatar" viewBox="0 0 120 120" role="img" aria-label="Avatar with the initials of Joanna Mary">
+          <circle cx="60" cy="60" r="58" fill="currentColor" />
+          <text x="60" y="74" text-anchor="middle" font-size="40" fill="#fff" font-family="sans-serif">JM</text>
+        </svg>
+        <p class="eyebrow">&lt; Multimedia Computing Portfolio /&gt;</p>
+        <h1>Joanna Mary Anak Abel</h1>
+        <p class="tagline">I design and build things people enjoy using.</p>
+        <p class="lead">I'm a third-year Multimedia Computing student at University Malaysia Sarawak (UNIMAS) passionate
+          about creating intuitive UI/UX, compelling graphic design, and interactive computer games.</p>
+        <ul class="tags" aria-label="Interests and skills">
+          <li>UI/UX</li>
+          <li>Graphic Design</li>
+          <li>Game Design</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <a class="btn" href="#projects">View my work</a>
+        <a class="btn btn-ghost" href="#contact">Contact me</a>
+      </div>
+      <div class="terminal" aria-hidden="true">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <pre>&gt; initialising portfolio...
+<span class="key">name:</span> Joanna Mary Anak Abel
+<span class="key">course:</span> Multimedia Computing
+<span class="key">university:</span> UNIMAS
+<span class="key">focus:</span> UI/UX, graphics, games</pre>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="reveal">
+      <p class="eyebrow">&lt; projects /&gt;</p>
+      <h2>Projects</h2>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="chip active" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" data-filter="uiux" aria-pressed="false">UI/UX</button>
+        <button class="chip" data-filter="graphic" aria-pressed="false">Graphic Design</button>
+      </div>
+      <div class="grid">
+
+        <article class="card" data-category="uiux">
+          <img class="card-thumb" src="images/art-hci-flow.png" loading="lazy"
+            alt="Screens from the HCI version of the ART mobile app prototype in Figma">
+          <p class="card-type">Human-Computer Interaction</p>
+          <h3>ART Mobile App Prototype (HCI)</h3>
+          <p>A Figma prototype of a mobile app for Kuching's upcoming Autonomous Rapid Transit (ART), designed using HCI
+            principles.</p>
+          <div class="card-actions">
+            <button class="link-btn"
+              data-details="Built as part of the Kuching Urban Transportation System (KUTS) project, which Sarawak Metro manages, this prototype is for the new ART service. I applied Human-Computer Interaction principles to the app's design, usability and user experience. Tool: Figma.">Details</button>
+            <a class="link-btn"
+              href="https://www.figma.com/design/gJeKfM3DJ6zDG0iCo5xRXE/HCI--G01-_Aster?node-id=0-1&t=FN2ulHZMmwbfQbkQ-1"
+              target="_blank" rel="noopener noreferrer">View on Figma<span class="sr-only"> (opens in a new
+                tab)</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="uiux">
+          <img class="card-thumb" src="images/art-uiux-flow.png" loading="lazy"
+            alt="Four screens of the Sarawak ART app in a row: splash screen, main dashboard and two My Tickets screens">
+          <p class="card-type">UI/UX</p>
+          <h3>ART Mobile App Prototype (UI/UX)</h3>
+          <p>A Figma prototype for the Sarawak ART app, focused on UI/UX design, usability and the overall user
+            experience.</p>
+          <div class="card-actions">
+            <button class="link-btn"
+              data-details="A mobile app prototype for the Autonomous Rapid Transit (ART), part of Sarawak Metro's Kuching Urban Transportation System (KUTS) project. This version applies UI/UX principles to the app's design, usability and user experience. Tool: Figma.">Details</button>
+            <a class="link-btn"
+              href="https://www.figma.com/design/CJUQ8gRfr3jUZwIGh6uUVl/TMT2703-Project--Group-U-I-?node-id=0-1&t=XzuIUrLX0kPnmGRK-1"
+              target="_blank" rel="noopener noreferrer">View on Figma<span class="sr-only"> (opens in a new
+                tab)</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="graphic">
+          <img class="card-thumb" src="images/cable-winder-website.png" loading="lazy"
+            alt="Website design for a cable winder created in Canva">
+          <p class="card-type">Graphic Design</p>
+          <h3>Cable Winder Website</h3>
+          <p>A website design concept for a cable winder, created in Canva.</p>
+          <div class="card-actions">
+            <button class="link-btn"
+              data-details="A website design for to keep cables organized, tangle-free, and easily adjustable to custom lengths, created in Canva. I learned how to present a product on a website layout using only Canva, without writing any code.">Details</button>
+            <a class="link-btn" href="https://canva.link/7b41qa3nkilzxrr" target="_blank" rel="noopener noreferrer">View
+              on Canva<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="uiux">
+          <img class="card-thumb" src="images/food-kiosk-system.png" loading="lazy"
+            alt="Interface screens of the Food Kiosk System prototype in Mockplus">
+          <p class="card-type">System Analysis & Design</p>
+          <h3>Food Kiosk System</h3>
+          <p>An interface design for a proposed food kiosk system, prototyped in Mockplus.</p>
+          <div class="card-actions">
+            <button class="link-btn"
+              data-details="For a System Analysis and Design assignment, I designed and developed the interface of a proposed food kiosk system using Mockplus. I learned how to design and 
+develop the interface by referring to the Data Flow Diagram. In the prototype, open the page called Food Kiosk System.">Details</button>
+            <a class="link-btn" href="https://rp.mockplus.com/rps/Wgby9tZDDa/ffZnhgkT6w? Please view 《Food Kiosk System》" target="_blank" rel="noopener noreferrer">View on
+              Mockplus<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-category="graphic">
+          <img class="card-thumb" src="images/anti-corruption-poster.png" loading="lazy"
+            alt="Poster titled Rasuah Sekecil Satu Sen. Implikasi Sebesar Negara, about the effects of corrupt practice">
+          <p class="card-type">Graphic Design</p>
+          <h3>Anti-Corruption Poster</h3>
+          <p>A poster on the effects of corrupt practice, titled <span lang="ms">Rasuah Sekecil Satu Sen. Implikasi
+              Sebesar Negara</span>.</p>
+          <div class="card-actions">
+            <button class="link-btn"
+              data-details="A poster created in Canva about the implications of corrupt practice, under the title Rasuah Sekecil Satu Sen. Implikasi Sebesar Negara. I learned how to carry a message through colour and layout.">Details</button>
+            <a class="link-btn" href="https://canva.link/ocia5kqv8eqb6bh" target="_blank" rel="noopener noreferrer">View
+              on Canva<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <h2>Contact</h2>
+      <p>Email me at <a href="mailto:joannamaryabel04@gmail.com">joannamaryabel04@gmail.com</a> or use the form.</p>
+      <form id="contactForm" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <span class="error" id="nameErr" role="alert"></span>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <span class="error" id="emailErr" role="alert"></span>
+
+        <label for="message">Message <small id="count">(0/300)</small></label>
+        <textarea id="message" name="message" rows="5" maxlength="300" required></textarea>
+        <span class="error" id="messageErr" role="alert"></span>
+
+        <button class="btn" type="submit">Send</button>
+        <p id="formStatus" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Joanna Mary. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <button id="toTop" class="icon-btn to-top" aria-label="Back to top" hidden>&#8593;</button>
+
+  <dialog id="modal" aria-labelledby="modalTitle">
+    <h3 id="modalTitle"></h3>
+    <img id="modalImg" class="modal-img" alt="" hidden>
+    <p id="modalText"></p>
+    <button id="modalClose" class="btn">Close</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
