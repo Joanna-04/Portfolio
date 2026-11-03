@@ -192,9 +192,25 @@ function initCarousel() {
   show(0);
 }
 
+/* 11. Copy email to clipboard, with a fallback message */
+function initCopyEmail() {
+  const btn = $("#copyEmail");
+  if (!btn) return;
+  const status = $("#copyStatus");
+  btn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.email);
+      status.textContent = "Email copied to clipboard!";
+    } catch (err) {
+      status.textContent = "Couldn't copy. Please use the Send Email button instead.";
+    }
+    setTimeout(() => (status.textContent = ""), 3000);
+  });
+}
+
 function init() {
   [initMenu, initTheme, initActiveNav, initReveal, initTerminal, initCarousel,
-   initFilter, initModal, initForm, initScrollUI, initYear].forEach((fn) => {
+   initFilter, initModal, initForm, initCopyEmail, initScrollUI, initYear].forEach((fn) => {
     try { fn(); } catch (err) { console.warn(`${fn.name} failed:`, err); }
   });
 }

@@ -192,24 +192,56 @@ develop the interface by referring to the Data Flow Diagram. In the prototype, o
 
     <!-- CONTACT -->
     <section id="contact" class="reveal">
-      <h2>Contact</h2>
-      <p>Email me at <a href="mailto:joannamaryabel04@gmail.com">joannamaryabel04@gmail.com</a> or use the form.</p>
-      <form id="contactForm" novalidate>
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" autocomplete="name" required>
-        <span class="error" id="nameErr" role="alert"></span>
+      <div class="contact-head">
+        <p class="eyebrow">&lt; connect with me /&gt;</p>
+        <h2>Contact</h2>
+        <p>Want to connect, collaborate or check out my work? Choose a channel below.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Let's build something.</h3>
+          <p>I enjoy talking about UI/UX, graphic design and web projects. Send me a message any time.</p>
+          <div class="contact-actions">
+            <button type="button" class="contact-btn" id="copyEmail"
+              data-email="joannamaryabel04@gmail.com">Copy Email</button>
+            <a class="contact-btn" href="mailto:joannamaryabel04@gmail.com">Send Email</a>
+            <a class="contact-btn" href="https://github.com/Joanna-04" target="_blank"
+              rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+          <p id="copyStatus" role="status"></p>
+        </div>
+        <div class="terminal" aria-hidden="true">
+          <div class="terminal-bar"><span></span><span></span><span></span></div>
+          <pre><span class="key">&gt; contact.email</span>
+joannamaryabel04@gmail.com
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" autocomplete="email" required>
-        <span class="error" id="emailErr" role="alert"></span>
+<span class="key">&gt; github</span>
+github.com/Joanna-04
 
-        <label for="message">Message <small id="count">(0/300)</small></label>
-        <textarea id="message" name="message" rows="5" maxlength="300" required></textarea>
-        <span class="error" id="messageErr" role="alert"></span>
+<span class="key">&gt; university</span>
+UNIMAS, Malaysia</pre>
+        </div>
+      </div>
 
-        <button class="btn" type="submit">Send</button>
-        <p id="formStatus" role="status"></p>
-      </form>
+      <div class="contact-card contact-form-wrap">
+        <h3>Or send a message</h3>
+        <form id="contactForm" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <span class="error" id="nameErr" role="alert"></span>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <span class="error" id="emailErr" role="alert"></span>
+
+          <label for="message">Message <small id="count">(0/300)</small></label>
+          <textarea id="message" name="message" rows="5" maxlength="300" required></textarea>
+          <span class="error" id="messageErr" role="alert"></span>
+
+          <button class="btn" type="submit">Send</button>
+          <p id="formStatus" role="status"></p>
+        </form>
+      </div>
     </section>
   </main>
 
